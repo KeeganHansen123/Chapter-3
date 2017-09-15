@@ -18,10 +18,10 @@ public class DelgadosTacos {
 		double burritoPrice = 2.99;
 		double enchiladaPrice = 2.99;
 		double posoleStewPrice = 2.50;
-		double guacChips = 1.99;
-		double quesadillas = 2.99;
+		double guacChipsPrice = 1.99;
+		double quesadillasPrice = 2.99;
 		double nachosPrice = 2.50;
-		double Tamales = 2.50;
+		double TamalesPrice = 2.50;
 		double ricePuddingPrice = 1.50;
 		double vampTacoPrice = 3.99;
 		
@@ -75,18 +75,23 @@ public class DelgadosTacos {
 	    burritoPriceTotal = burritoAmountOrdered * burritoPrice;
 	    enchiladaPriceTotal = enchiladaAmountOrdered * enchiladaPrice;
 	    posolePriceTotal = posoleAmountOrdered * posoleStewPrice;
-	    guacPriceTotal;
-	    totalPrice = tacoPriceTotal + burritoPriceTotal + enchiladaPriceTotal + posolePriceTotal;
+	    guacPriceTotal = guacAmountOrdered * guacChipsPrice;
+	    quesadillasPriceTotal = quesadillasAmountOrdered * quesadillasPrice;
+	    nachosPriceTotal = nachosAmountOrdered * nachosPrice;
+	    tamalesPriceTotal = tamalesAmountOrdered * TamalesPrice;
+	    ricePriceTotal = 1;
+	    vampPriceTotal = 1;
+	    totalPrice = tacoPriceTotal + burritoPriceTotal + enchiladaPriceTotal + posolePriceTotal +
+	    		guacPriceTotal + quesadillasPriceTotal + nachosPriceTotal + tamalesPriceTotal + ricePriceTotal + vampPriceTotal;
 	    
-	    System.out.println("You ordered " + tacoAmountOrdered + " and " + burritoAmountOrdered + " it will cost $" 
-	    		+ totalPrice);
+	    System.out.println("You ordered " + tacoAmountOrdered + " and " + burritoAmountOrdered + " and " + posoleAmountOrdered + 
+	    		" and " + guacAmountOrdered + " it will cost $" + totalPrice);
 	}
 
 	public static void salesTax()
 	{
 		final double TAX_RATE = .60;
 		
-		menu();
 	}
 	
 	
