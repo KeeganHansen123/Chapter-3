@@ -8,7 +8,7 @@ public class DelgadosTacos {
 	public static void main(String[] args) 
 	{
 		menu();
-		
+		salesTax();
 	}
 
 	public static void menu()
@@ -38,6 +38,7 @@ public class DelgadosTacos {
 		double vampAmountOrdered;
 		
 		double totalPrice;
+		double totalWithTax;
 		
 		double tacoPriceTotal;
 		double burritoPriceTotal;
@@ -86,12 +87,17 @@ public class DelgadosTacos {
 	    		guacPriceTotal + quesadillasPriceTotal + nachosPriceTotal + tamalesPriceTotal + ricePriceTotal + vampPriceTotal;
 	    
 	    System.out.println("It will cost $" + totalPrice);
+	    System.out.println("Your total with tax comes to $" + (df.format(totalWithTax)));
+	    totalWithTax = totalPrice
+	
 	}
 
 	public static void salesTax()
 	{
-		final double TAX_RATE = 0.075;
-		
+		double TAX_RATE = 0.075;
+	    System.out.println("It will cost $" + totalPrice);
+	    System.out.println("Your total with tax comes to $" + (df.format(totalWithTax)));
+	    totalWithTax = totalPrice * TAX_RATE;
 	}
 	
 	
@@ -101,3 +107,8 @@ public class DelgadosTacos {
 	}
 	
 }
+
+//System.out.println("You ordered " + tacoAmountOrdered + " and " + burritoAmountOrdered + " and " + posoleAmountOrdered + 
+		//" and " + guacAmountOrdered + " and " + nachosPriceTotal + 
+		//" and " + tamalesPriceTotal + " and " + ricePriceTotal + " and " + ricePriceTotal + 
+		//" and " + vampPriceTotal + " it will cost $" + totalPrice);
