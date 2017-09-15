@@ -7,12 +7,13 @@ public class DelgadosTacos {
 
 	public static void main(String[] args) 
 	{
-		DecimalFormat df = new DecimalFormat("0.00");
 		menu();
+		
 	}
 
 	public static void menu()
 	{
+		DecimalFormat df = new DecimalFormat("0.00");
 		Scanner input = new Scanner(System.in);
 		double tacoPrice = 1.99;
 		double burritoPrice = 2.99;
@@ -79,18 +80,17 @@ public class DelgadosTacos {
 	    quesadillasPriceTotal = quesadillasAmountOrdered * quesadillasPrice;
 	    nachosPriceTotal = nachosAmountOrdered * nachosPrice;
 	    tamalesPriceTotal = tamalesAmountOrdered * TamalesPrice;
-	    ricePriceTotal = 1;
-	    vampPriceTotal = 1;
+	    ricePriceTotal = riceAmountOrdered * ricePuddingPrice;
+	    vampPriceTotal = vampAmountOrdered * vampTacoPrice;
 	    totalPrice = tacoPriceTotal + burritoPriceTotal + enchiladaPriceTotal + posolePriceTotal +
 	    		guacPriceTotal + quesadillasPriceTotal + nachosPriceTotal + tamalesPriceTotal + ricePriceTotal + vampPriceTotal;
 	    
-	    System.out.println("You ordered " + tacoAmountOrdered + " and " + burritoAmountOrdered + " and " + posoleAmountOrdered + 
-	    		" and " + guacAmountOrdered + " it will cost $" + totalPrice);
+	    System.out.println("It will cost $" + totalPrice);
 	}
 
 	public static void salesTax()
 	{
-		final double TAX_RATE = .60;
+		final double TAX_RATE = 0.075;
 		
 	}
 	
