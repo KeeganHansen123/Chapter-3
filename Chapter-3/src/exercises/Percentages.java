@@ -6,11 +6,11 @@ public class Percentages {
 
 	public static void main(String[] args) 
 	{
-		computePercent();
+		computePercent(Num1, Num2);
 
 	}
 
-	public static void computePercent()
+	public static void computePercent(double totalPercent)
 	{
 		Scanner input = new Scanner(System.in);
 		double Num1;
