@@ -8,20 +8,22 @@ public class NumbersDemo {
 	{
 		
 		
-		
-		displayTwiceTheNumber();
-		displayNumberPlusFive();
-		displayNumberSquared();
-	}
-	public static void displayTwiceTheNumber()
-	{
-		Scanner input = new Scanner(System.in);
-		
 		System.out.println("Enter a number you want doubled: ");
 	    
 	    int Num1 = input.nextInt();
 	    System.out.println("Enter another number: ");
 	    int Num2 = input.nextInt();
+		
+		
+		displayTwiceTheNumber(Num1, Num2);
+		displayNumberPlusFive();
+		displayNumberSquared();
+	}
+	public static void displayTwiceTheNumber(int times, int times2)
+	{
+		
+		
+		
 	    int times = Num1 * 2;
 		int times2 = Num2 * 2;
 	    System.out.println(+ Num1 + " times two is " + times + " and " + Num2 + " times two is " +
